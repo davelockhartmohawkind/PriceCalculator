@@ -241,7 +241,11 @@ $(document).ready(function () {
     }, false);
 
 
-    var newhtml = 'Version: ' + 'V1.1.46 <br />';// +
+    var newhtml = 'Version: ' + 'V1.1.47 <br />';// +
+    if (device != null) {
+        alert(newhtml);
+        alert(device.uuid);
+    }
                   //'Device Name: ' + device.name + '<br />' +
                   //'Device PhoneGap: ' + device.phonegap + '<br />' +
                   //'Device Platform: ' + device.platform + '<br />' +
