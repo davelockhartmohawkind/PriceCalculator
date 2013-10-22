@@ -241,12 +241,12 @@ $(document).ready(function () {
     }, false);
 
 
-    var newhtml = 'Version: ' + 'V1.1.45 <br />' +
-                  'Device Name: ' + device.name + '<br />' +
-                  'Device PhoneGap: ' + device.phonegap + '<br />' +
-                  'Device Platform: ' + device.platform + '<br />' +
-                  'Device UUID: ' + device.uuid + '<br />' +
-                  'Device Version: ' + device.version + '<br />';
+    var newhtml = 'Version: ' + 'V1.1.46 <br />';// +
+                  //'Device Name: ' + device.name + '<br />' +
+                  //'Device PhoneGap: ' + device.phonegap + '<br />' +
+                  //'Device Platform: ' + device.platform + '<br />' +
+                  //'Device UUID: ' + device.uuid + '<br />' +
+                  //'Device Version: ' + device.version + '<br />';
 
     $("#deviceProperties").html(newhtml);
 
