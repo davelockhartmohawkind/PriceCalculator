@@ -176,7 +176,7 @@ $(document).ready(function () {
  */
 
    
-    $("#deviceProperties").html = 'Version: ' + 'V&nbsp;1.1.42 <br />' +
+    $("#deviceProperties").html = 'Version: ' + 'V&nbsp;1.1.43 <br />' +
                         'Device Name: ' + device.name + '<br />' +
                         'Device PhoneGap: ' + device.phonegap + '<br />' +
                         'Device Platform: ' + device.platform + '<br />' +
