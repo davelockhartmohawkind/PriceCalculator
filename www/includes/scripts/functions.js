@@ -241,12 +241,12 @@ $(document).ready(function () {
     }, false);
 
 
-    var newhtml = 'Version: ' + 'V1.1.48 <br />';// +
-    if (device != null) {
-        alert(newhtml);
-        alert(device.uuid);
-    }
-                  //'Device Name: ' + device.name + '<br />' +
+    var newhtml = 'Version: ' + 'V1.1.49 <br />';// +
+    //if (device != null) {
+    //    alert(newhtml);
+    //    alert(device.uuid);
+    //}
+    //              //'Device Name: ' + device.name + '<br />' +
                   //'Device PhoneGap: ' + device.phonegap + '<br />' +
                   //'Device Platform: ' + device.platform + '<br />' +
                   //'Device UUID: ' + device.uuid + '<br />' +
