@@ -241,7 +241,7 @@ $(document).ready(function () {
     }, false);
 
 
-    var newhtml = 'Version: ' + 'V1.1.47 <br />';// +
+    var newhtml = 'Version: ' + 'V1.1.48 <br />';// +
     if (device != null) {
         alert(newhtml);
         alert(device.uuid);
