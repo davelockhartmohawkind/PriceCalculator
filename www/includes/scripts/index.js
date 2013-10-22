@@ -36,7 +36,7 @@ var app = {
         app.receivedEvent('deviceready');
         var element = document.getElementById('deviceProperties');
 
-        element.innerHTML = 'Version: ' + 'V&nbsp;1.1.39 <br />' +
+        element.innerHTML = 'Version: ' + 'V&nbsp;1.1.40 <br />' +
                             'Device Name: ' + device.name + '<br />' +
                             'Device PhoneGap: ' + device.phonegap + '<br />' +
                             'Device Platform: ' + device.platform + '<br />' +
