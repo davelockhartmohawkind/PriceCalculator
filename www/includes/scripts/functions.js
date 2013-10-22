@@ -176,12 +176,7 @@ $(document).ready(function () {
  */
 
    
-    //$("#deviceProperties").html = 'Version: ' + 'V&nbsp;1.1.43 <br />' +
-    //                    'Device Name: ' + device.name + '<br />' +
-    //                    'Device PhoneGap: ' + device.phonegap + '<br />' +
-    //                    'Device Platform: ' + device.platform + '<br />' +
-    //                    'Device UUID: ' + device.uuid + '<br />' +
-    //                    'Device Version: ' + device.version + '<br />';
+    
 
 
     if (is_touch_device == true) {
@@ -246,7 +241,14 @@ $(document).ready(function () {
     }, false);
 
 
+    var newhtml = 'Version: ' + 'V1.1.45 <br />' +
+                  'Device Name: ' + device.name + '<br />' +
+                  'Device PhoneGap: ' + device.phonegap + '<br />' +
+                  'Device Platform: ' + device.platform + '<br />' +
+                  'Device UUID: ' + device.uuid + '<br />' +
+                  'Device Version: ' + device.version + '<br />';
 
+    $("#deviceProperties").html(newhtml);
 
     // Make default profile active... change to last active
     $('.item_name h2').first().addClass('active');
