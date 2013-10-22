@@ -175,6 +175,15 @@ $(document).ready(function () {
  }
  */
 
+   
+    $("#deviceProperties").html = 'Version: ' + 'V&nbsp;1.1.42 <br />' +
+                        'Device Name: ' + device.name + '<br />' +
+                        'Device PhoneGap: ' + device.phonegap + '<br />' +
+                        'Device Platform: ' + device.platform + '<br />' +
+                        'Device UUID: ' + device.uuid + '<br />' +
+                        'Device Version: ' + device.version + '<br />';
+
+
     if (is_touch_device == true) {
         $(document).on('blur', 'input, textarea', function () {
             setTimeout(function () {
