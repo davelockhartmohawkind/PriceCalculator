@@ -962,7 +962,7 @@ var deleteProfile = function (target_profile, dealerName) {
     // alert('Delete Profile Function - deleteProfile() - is currently empty. ');
     // Check if more than one profile exists and the value is not 'default', if not then alert no delete
 
-    if (dealerName == 'Default_Profile') {
+    if (dealerName == 'f') {
         alert("Can not delete profile named Default_Profile");
         return;
     }

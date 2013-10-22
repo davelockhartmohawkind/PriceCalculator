@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.mohawkind.test"
+        id        = "com.mohawkind.pricecalculator"
         version   = "1.1.39" >
 
     <name>Price Calculator</name>
@@ -12,7 +12,7 @@
         Mohawk Carpet Calculator Application.
     </description>
 
-    <author href="http://mohawk.com" email="support@mohawk.com">
+    <author href="http://mohawkind.com" email="dave_lockhart@mohawkind.com">
         Mohawk Mobile Team
     </author>
 

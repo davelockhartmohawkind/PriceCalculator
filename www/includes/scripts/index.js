@@ -34,6 +34,14 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        var element = document.getElementById('deviceProperties');
+
+        element.innerHTML = 'Version: ' + 'V&nbsp;1.1.39 <br />' +
+                            'Device Name: ' + device.name + '<br />' +
+                            'Device PhoneGap: ' + device.phonegap + '<br />' +
+                            'Device Platform: ' + device.platform + '<br />' +
+                            'Device UUID: ' + device.uuid + '<br />' +
+                            'Device Version: ' + device.version + '<br />';
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
