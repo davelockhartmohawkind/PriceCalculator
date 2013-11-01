@@ -241,7 +241,7 @@ $(document).ready(function () {
     }, false);
 
 
-    var newhtml = 'Version: ' + 'V1.1.51 <br />';// +
+    var newhtml = 'Version: ' + 'V1.1.52 <br />';// +
     //if (device != null) {
     //    alert(newhtml);
     //    alert(device.uuid);
@@ -818,6 +818,7 @@ var shadeDown = function () {
     }, 300, 'easeInQuad');
 
     $("#inputDealerSelection").focus();
+    $("#inputDealerSelection").val("");
 
 }
 
