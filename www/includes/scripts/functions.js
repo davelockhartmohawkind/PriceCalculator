@@ -879,7 +879,7 @@ var getHeightValues = function () {
     dropShade = mHeight - mMargin;
     dropWrapper = dropShade - mTab;
 
-    alert("Window height: " + mHeight +
+    showAlert("Window height: " + mHeight +
   '\n' +
   "DropShade height: " + dropShade +
   '\n' +
@@ -973,13 +973,43 @@ var applyProfile = function (target_profile, dealerName) {
 
 }
 
+
+    // Show a custom alert
+    //
+function showAlert(message) {
+
+    if (navigator.userAgent.indexOf("MSIE") > 0) {
+        // run custom code for Internet Explorer.
+    }
+
+    if (navigator.notification != undefined) {
+
+        navigator.notification.alert(
+            message,  // message
+            alertDismissed,
+            'Attention',            // title
+            'OK'                  // buttonName
+        );
+    }
+    else {
+        alert(message);
+    }
+   
+    }
+
+
+    // alert dialog dismissed
+    function alertDismissed() {
+        // do something
+    }
+
 var deleteProfile = function (target_profile, dealerName) {
     // Delete profile
     // alert('Delete Profile Function - deleteProfile() - is currently empty. ');
     // Check if more than one profile exists and the value is not 'default', if not then alert no delete
 
     if (dealerName == 'f') {
-        alert("Can not delete profile named Default_Profile");
+        showAlert("Can not delete profile named Default_Profile");
         return;
     }
 
@@ -1000,7 +1030,7 @@ var deleteProfile = function (target_profile, dealerName) {
 
 var resetCosts = function () {
     // Reset all cost factors to default
-    alert('Reset Cost Function - resetCosts() - is currently empty. ');
+    showAlert('Reset Cost Function - resetCosts() - is currently empty. ');
 
 }
 
@@ -1020,7 +1050,7 @@ function addProduct() {
 
 var clearProduct = function () {
     // Remove Product from calculation results
-    alert('Clear Product Function - clearProduct() - is currently empty. ');
+    showAlert('Clear Product Function - clearProduct() - is currently empty. ');
 
 }
 
@@ -1053,13 +1083,13 @@ function clearAllProducts() {
 
 var mCalculate = function () {
     // Add new profiles
-    alert('Calculate Function - mCalculate() - is currently empty. ');
+    showAlert('Calculate Function - mCalculate() - is currently empty. ');
 
 }
 
 var exportData = function () {
     // Export data from calculation results
-    alert('Export Data Function - exportData() - is currently empty. ');
+    showAlert('Export Data Function - exportData() - is currently empty. ');
 
 }
 
@@ -1313,7 +1343,7 @@ function setRetailData(dealerName) {
         });
 
     } catch (err) {
-        alert(err.message);
+        showAlert(err.message);
     }
     //add a blank row
     //addBlankRetailRow(dealerObject.isRetailYd);
@@ -2060,7 +2090,7 @@ function onPanelDealerClick() {
 }
 
 function ontopMenuSettingsClick() {
-    alert("Version 1.0.4");
+    showAlert("Version 1.0.4");
 };
 
 function onPanelWholesaleClick() {
@@ -2106,7 +2136,7 @@ function onWholesaleCostSaveButtonClick() {
     //}
     var itemId = myArray[1];
     if (dealerName == "") {
-        alert("Please select a dealer");
+        showAlert("Please select a dealer");
         return;
     }
     //if (wholesaleYd == "") {
@@ -2173,7 +2203,7 @@ function onRetailCostSaveButtonClick() {
 
         var itemId = myArray[1];
         if (dealerName == "") {
-            alert("Please select a dealer");
+            showAlert("Please select a dealer");
             return;
         }
 
@@ -2208,7 +2238,7 @@ function onRetailCostSaveButtonClick() {
         saveRetail2(itemId, dealerName, productName, retailYd, retailFt);
         setDealerData(dealerName);
     } catch (err) {
-        alert(err.message);
+        showAlert(err.message);
     }
 
 }
@@ -3152,7 +3182,7 @@ function DAsaveDealer(selectedDealerName, dealerName, profitMargin, markup, useP
 
 
             if (filteredDealer.length > 0) {
-                alert("Dealer Name Already Exist")
+                showAlert("Dealer Name Already Exist")
                 return;
             }
         }
@@ -3237,7 +3267,7 @@ function onSaveDealerClick() {
     var selectedDealerName = global_selectDealerSelection;
     var newDealerName = global_inputDealerSelection;
     if (newDealerName == null || newDealerName == '') {
-        alert("Enter Dealer Name");
+        showAlert("Enter Dealer Name");
     }
 
 
