@@ -978,22 +978,22 @@ var applyProfile = function (target_profile, dealerName) {
     //
 function showAlert(message) {
 
-    if (navigator.userAgent.indexOf("MSIE") > 0) {
-        // run custom code for Internet Explorer.
-    }
+        if (navigator.userAgent.indexOf("MSIE") > 0) {
+            // run custom code for Internet Explorer.
+        }
 
-    if (navigator.notification != undefined) {
+        if (navigator.notification != undefined) {
 
-        navigator.notification.alert(
-            message,  // message
-            alertDismissed,
-            'Attention',            // title
-            'OK'                  // buttonName
-        );
-    }
-    else {
-        alert(message);
-    }
+            navigator.notification.alert(
+                message,  // message
+                alertDismissed,
+                'Attention',            // title
+                'OK'                  // buttonName
+            );
+        }
+        else {
+            alert(message);
+        }
    
     }
 
@@ -1003,6 +1003,16 @@ function showAlert(message) {
         // do something
     }
 
+    
+    
+
+    
+
+
+
+
+    var global_target_profile_index = 0;
+    var global_target_dealerName = "";
 var deleteProfile = function (target_profile, dealerName) {
     // Delete profile
     // alert('Delete Profile Function - deleteProfile() - is currently empty. ');
@@ -1013,20 +1023,39 @@ var deleteProfile = function (target_profile, dealerName) {
         return;
     }
 
-    var index = parseInt(target_profile);
+    global_target_profile_index = parseInt(target_profile);
+    global_target_dealerName = dealerName;
+    if (navigator.notification == undefined) {
+        var x = confirm('Are you sure you would like to delete this profile(' + dealerName + ')?', 'Caution');
 
-        var x = confirm('Are you sure you would like to delete this profile?','Caution');
 
-        //alert(x);
         if (x == true) {
-            $('.list_item').eq(index).remove();
+            $('.list_item').eq(global_target_profile_index).remove();
             global_inputDealerSelection = dealerName;
             global_selectDealerSelection = dealerName;
             onDeleteDealerClick();
         }
+    }
+    else {
+        navigator.notification.confirm(
+           'Are you sure you would like to delete this profile(' + dealerName + ')?',  // message
+           onConfirmDeleteProfile,              // callback to invoke with index of button pressed
+           'Caution',            // title
+           'Yes,Cancel'          // buttonLabels
+       );
+    }
 
 }
 
+function onConfirmDeleteProfile(button) {
+    //alert('handling ConfirmDeleteProfile ' + button);
+    if (button == 'Yes') {
+        $('.list_item').eq(global_target_profile_index).remove();
+        global_inputDealerSelection = global_target_dealerName;
+        global_selectDealerSelection = global_target_dealerName;
+        onDeleteDealerClick();
+    }
+}
 
 var resetCosts = function () {
     // Reset all cost factors to default
@@ -1056,30 +1085,37 @@ var clearProduct = function () {
 
 function clearAllProducts() {
     // Remove All Products from calculation results
-  
-    var x = confirm('Are you sure you would like to clear all products?', 'Caution');
-    //$("#dialog-confirm").dialog({
-    //    resizable: false,
-    //    height: 140,
-    //    modal: true,
-    //    buttons: {
-    //        "Delete all items": function () {
-    //            $(this).dialog("close");
-    //        },
-    //        Cancel: function () {
-    //            $(this).dialog("close");
-    //        }
-    //    }
-    //});
+    if (navigator.notification == undefined) {
+        var x = confirm('Are you sure you would like to clear all products?', 'Caution');
 
-    if (x == true) {
-       
-        deleteWholesaleByDealerName(global_selectDealerSelection);
-        deleteRetailByDealerName(global_selectDealerSelection);
-        //onDealerInputBlur2();
+        if (x == true) {
+
+            deleteWholesaleByDealerName(global_selectDealerSelection);
+            deleteRetailByDealerName(global_selectDealerSelection);
+            //onDealerInputBlur2();
+        }
+    }
+    else {
+          navigator.notification.confirm(
+           'Are you sure you would like to clear all products?',  // message
+           onConfirmClearProducts,              // callback to invoke with index of button pressed
+           'Caution',            // title
+           'Yes,Cancel'          // buttonLabels
+       );
     }
 
 }
+
+function onConfirmDeleteProfile(button) {
+   
+    if (button == 'Yes') {
+        deleteWholesaleByDealerName(global_selectDealerSelection);
+        deleteRetailByDealerName(global_selectDealerSelection);
+    }
+
+}
+
+
 
 var mCalculate = function () {
     // Add new profiles
