@@ -1048,8 +1048,8 @@ var deleteProfile = function (target_profile, dealerName) {
 }
 
 function onConfirmDeleteProfile(button) {
-    alert('handling ConfirmDeleteProfile ' + button);
-    if (button == 'Yes') {
+    //alert('handling ConfirmDeleteProfile ' + button);
+    if (button == '1') {
         $('.list_item').eq(global_target_profile_index).remove();
         global_inputDealerSelection = global_target_dealerName;
         global_selectDealerSelection = global_target_dealerName;
@@ -1107,8 +1107,8 @@ function clearAllProducts() {
 }
 
 function onConfirmClearProducts(button) {
-    alert('handling ConfirmClearProducts ' + button);
-    if (button == 'Yes') {
+    //alert('handling ConfirmClearProducts ' + button);
+    if (button == '1') {
         deleteWholesaleByDealerName(global_selectDealerSelection);
         deleteRetailByDealerName(global_selectDealerSelection);
     }
