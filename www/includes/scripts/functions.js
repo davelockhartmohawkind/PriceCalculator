@@ -1048,7 +1048,7 @@ var deleteProfile = function (target_profile, dealerName) {
 }
 
 function onConfirmDeleteProfile(button) {
-    //alert('handling ConfirmDeleteProfile ' + button);
+    alert('handling ConfirmDeleteProfile ' + button);
     if (button == 'Yes') {
         $('.list_item').eq(global_target_profile_index).remove();
         global_inputDealerSelection = global_target_dealerName;
@@ -1106,8 +1106,8 @@ function clearAllProducts() {
 
 }
 
-function onConfirmDeleteProfile(button) {
-   
+function onConfirmClearProducts(button) {
+    alert('handling ConfirmClearProducts ' + button);
     if (button == 'Yes') {
         deleteWholesaleByDealerName(global_selectDealerSelection);
         deleteRetailByDealerName(global_selectDealerSelection);
