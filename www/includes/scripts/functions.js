@@ -241,7 +241,7 @@ $(document).ready(function () {
     }, false);
 
 
-    var newhtml = 'Version: ' + 'V1.1.58 <br />';// +
+    var newhtml = 'Version: ' + 'V1.1.59 <br />';// +
     //if (device != null) {
     //    alert(newhtml);
     //    alert(device.uuid);
@@ -816,6 +816,9 @@ var shadeDown = function () {
     }).animate({
         top: '-4px'
     }, 300, 'easeInQuad');
+
+    //next line fixes a bug when page is not already at the top
+    window.scrollTo(0, 0);
 
     $("#inputDealerSelection").focus();
     $("#inputDealerSelection").val("");
