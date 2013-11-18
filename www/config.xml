@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.mohawkind.pricecalculator"
-        version   = "1.1.57" >
+        version   = "1.1.58" >
 
     <name>Price Calculator</name>
 
@@ -100,10 +100,10 @@
     <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" />
     <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" />
     <gap:splash src="res/screen/blackberry/screen-225.png"         gap:platform="blackberry" />
-    <gap:splash src="res/icon/ios/carpetcalc_icon_v1.png"    gap:platform="ios"     width="320" height="480" />
-    <gap:splash src="res/icon/ios/carpetcalc_icon_v1.png" gap:platform="ios"     width="640" height="960" />
-    <gap:splash src="res/icon/ios/carpetcalc_icon_v1.png"      gap:platform="ios"     width="768" height="1024" />
-    <gap:splash src="res/icon/ios/carpetcalc_icon_v1.png"     gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="res/icon/ios/carpetcalc_ipad3_splash.png"    gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="res/icon/ios/carpetcalc_ipad3_splash.png" gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="res/icon/ios/carpetcalc_ipad3_splash_768.png"      gap:platform="ios"     width="768" height="1024" />
+    <gap:splash src="res/icon/ios/carpetcalc_ipad3_splash.png"     gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone" />
 
     <!--
